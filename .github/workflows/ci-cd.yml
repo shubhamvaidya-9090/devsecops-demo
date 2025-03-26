@@ -93,7 +93,7 @@ jobs:
           path: dist/
 
       - name: Printing some stuff
-        run: echo -e "$IMAGE_NAME\n$REGISTRY\n${{ github.repository }}\n${{ github.sha }}\n$image_tag"
+        run: echo -e "$IMAGE_NAME\n$REGISTRY\n${{ github.repository }}\n${{ github.sha }}\n${{ steps.set_output.outputs.image_tag }}"
         
       
   #     - name: Set up Docker Buildx
