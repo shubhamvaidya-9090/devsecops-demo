@@ -91,6 +91,9 @@ jobs:
         with:
           name: build-artifacts
           path: dist/
+
+      - name: printing some stuff
+        run: echo $IMAGE_NAME $REGISTRY ${{ github.repository }} ${{ github.sha }} $image_tag
       
   #     - name: Set up Docker Buildx
   #       uses: docker/setup-buildx-action@v3
